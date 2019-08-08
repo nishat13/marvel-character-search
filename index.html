@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Marvel Character Search</title>
+  <meta name="description" content="">
+  <meta name="author" content="Nishat Chowdhury">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/blast/127/spiderman-512.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="script.js"></script>
+  <script src="js/md5.min.js"></script>
+</head>
+
+<body>
+  
+
+
+
+<div class="header">
+  <img class =logobox src="images/marvel.png" alt="marvel-logo" width="174;" height="70;">
+  <img class =logobox src="images/charactertext.png" alt="character-logo" width="224;" height="90;">
+  <img class =logobox src="images/searchtext.png" alt="search-logo" width="174;" height="70;">
+</div>
+
+
+<div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">REFRESH</a>
+    <div class="dropdown">
+        <button class="dropbtn">ABOUT
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <p>This is a simple browser-based application <br>
+             that uses the <span style="color: red">Marvel Comics API</span> in order <br>
+             to search through the Marvel comic database. <br>
+             It is designed by COMS W4170: User Interface <br>
+             Design student <span style="color: red">Nishat Chowdhury</span>.</p>
+        </div>
+      </div> 
+    <div class="dropdown">
+      <button class="dropbtn">INSTRUCTIONS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <p>1. Fill in the <span style="color: red">required</span> input areas. Title can be any beginning keyword.<br><br>
+           2. You will receive a list of a character image, comic book title, character name,<br>
+              and character description. You may choose to order them as you wish.<br><br>
+           3.
+           Have <span style="color: red">FUN</span>! If you have questions, click on the contact tab to communicate <br> 
+           about additional concerns.</p>
+      </div>
+    </div> 
+    <a href="mailto:ntc2115@columbia.edu">CONTACT</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+<br>
+<br>
+
+
+<form id="search-form">
+  <label for="name">Title:</label>
+  <input type="text" id="name">
+  <label for="startYear">Start Year:</label>
+  <input type="text" id="startYear">
+  Issue Format:
+  <select id="issueFormat">
+      <option value="comic">Comic</option>
+      <option value="digitalcomic">Digital Comic</option>
+      <option value="hardcover">Hardcover</option>
+  </select>
+  Order By:
+  <select id="orderBy">
+      <option value="title">Title</option>
+      <option value="issueNumber">Issue Number</option>
+      <option value="focDate">Default</option>
+  </select>
+  <button type="button" class="myButton" onclick="getMarvelResponse();">Submit</button>
+</form>
+
+<br>
+<button type="button" class="butt" onclick="getPrev();">Previous</button>
+<button type="button" class="butt" onclick="getNext();">Next</button>
+
+
+
+
+<div id="result"></div>
+</body>
+</html>
+
+
+<div class="footer">
+    <p>Data provided by Marvel. © 2018 Marvel</p>
+  </div>
